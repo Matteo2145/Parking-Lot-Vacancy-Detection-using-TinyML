@@ -1,0 +1,137 @@
+\documentclass[sigconf,10pt,nonacm]{acmart}
+
+\hfuzz=100pt
+\hbadness=99999
+\vbadness=99999
+
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\pdfstringdefDisableCommands{%
+  \def\\{}%
+}
+
+\usepackage{hyperref}
+
+
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmlicensed}
+\copyrightyear{2024}
+\acmYear{2024}
+\acmDOI{XXXXXXX.XXXXXXX}
+
+
+\begin{document}
+
+\title[Project/Paper Title]{Project/Paper Title}
+
+\author{Name Surname}
+\email{xyz@unitn.it}
+\orcid{123}
+
+
+\affiliation{%
+  %\institution{Department of Information Engineering and Computer Science}
+  \institution{University of Trento}
+  \streetaddress{Via Sommarive 9}
+  \city{Povo}
+  \state{Trento}
+  \country{Italy}
+  \postcode{38123}
+}
+
+\renewcommand{\shortauthors}{XXX et al.}
+
+
+\begin{abstract}
+Write a short summary of the work. 
+\end{abstract}
+
+\maketitle
+
+I \emph{recommend}---but do not require--- that you use
+the following organization for your abstract. 
+Sections~\ref{sec:motivation} through \ref{sec:key-contributions}
+should be a summary of your full paper. Section~\ref{sec:motivation}
+motivates the paper; Section~\ref{sec:limitations} describes
+limitations of the state of the art, if applicable;
+Section~\ref{sec:key-insights} presents the key new insight or
+insights of the paper; 
+Section~\ref{sec:main-artifacts} presents the main artifacts described
+in the paper;  Section~\ref{sec:key-contributions} summarizes the key
+results and technical contributions of your paper. 
+
+\begin{itemize}
+    \item Your paper should be {\bf minimum 4} pages.
+
+    \item You will submit your paper via {\bf \href{https://unitn-lpes24.hotcrp.com/}{https://unitn-lpes24.hotcrp.com/}}
+\end{itemize}
+
+
+\section{Motivation}
+\label{sec:motivation}
+
+
+\begin{itemize}
+\item What is the problem your work attacks? Be specific.
+\item Why is it an important problem?
+\end{itemize}
+
+\noindent
+Articulate the importance of this problem, using as little jargon as possible. \emph{Be specific}
+about the problem you are addressing; it should be the one that your
+paper directly addresses.
+
+\section{Limitations of the State of the Art}
+\label{sec:limitations}
+
+\begin{itemize}
+\item What is the state of the art in this topic today (if any)?
+\item What are its limits?
+\end{itemize}
+
+\section{Key Insights}
+\label{sec:key-insights}
+
+\begin{itemize}
+\item What are the one or two key new insights in this paper?
+\item How does it advance the state of the art?
+\item What makes it more effective than past approaches?
+\end{itemize}
+
+\section{Main Artifacts}
+\label{sec:main-artifacts}
+
+\begin{itemize}
+\item What are the key artifacts presented in your paper: a
+  methodology, a hardware design, a software algorithm, an
+  optimization or control technique, etc.?
+  \item How were your artifacts implemented and evaluated? 
+\end{itemize}
+
+\section{Key Results and Contributions}
+\label{sec:key-contributions}
+
+\begin{itemize}
+  \item What are the most important \emph{one or two} empirical or theoretical
+    results of this approach?
+  \item What are the contributions that this paper makes to the state of the
+    art? List them in an \texttt{itemize} section. Each contribution should be no more than a few sentences long.
+  \item Clearly describe its advantages over past work, including how it overcomes their limitations.
+\end{itemize}
+
+This is reference~\cite{lamport94} example.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+
+\end{document}
