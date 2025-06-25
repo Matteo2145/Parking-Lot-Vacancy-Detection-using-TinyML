@@ -1,0 +1,5 @@
+Training started at: 2025-06-25 09:15:18.952194
+Training and optimization failed at: 2025-06-25 09:15:45.729372
+Error: [Errno 2] No such file or directory: 'yolov11n.pt'
+--------------------------------------------------
+Training started at: 2025-06-25 09:16:20.463687
