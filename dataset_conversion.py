@@ -65,6 +65,9 @@ def process_split(split):
             print(f"Could not read image {image_path}")
             continue
 
+        # Convert image to 160x120
+        image = cv2.resize(image, (160, 120))
+
         h, w = image.shape[:2]
 
         with open(os.path.join(label_dir, label_file), 'r') as f:
