@@ -14,8 +14,8 @@ Our model takes in input an image of a known parking lot, it is fundamental to k
 
 ## Requirements
 Some packages/Apps need to be imported:
--Pillow
--[Arduino IDE](https://www.arduino.cc/en/software/)
+-Pillow  
+-[Arduino IDE](https://www.arduino.cc/en/software/)  
 ...
 
 
