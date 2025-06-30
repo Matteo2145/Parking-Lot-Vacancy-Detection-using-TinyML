@@ -19,7 +19,11 @@ Let's start by presenting the specifications of our microcontroller: ([Documenta
 A limitation of this microcontroller is the limited amount of memory, having 1MB flash and 256KB of RAM. This limitation forced us to create a model as tiny as possible having a good value of accuracy.
 
 ## Challenges and Future Features
-As stated previously our main challenge was to create a light model. The first idea was to create a **Multiple Objects Detection** starting from a YOLO11n model, the model has been trained in Google Collab using the dataset showed in the introduction. We obtained good results in terms of accuracy, the model was able to detect cars as well as empty slots. The drawback of this solution was the size of the model, because it was impossible, even with int8 quantization, to obtain a model that could be deployed on our Arduino.  
+
+![yolo_val](https://github.com/user-attachments/assets/beb59485-a05e-42f1-bcf9-6a714d027080)
+
+
+As stated previously our main challenge was to create a light model. The first idea was to create a **Multiple Objects Detection** starting from a YOLO11n model, the model has been trained in Google Colab using the dataset showed in the introduction. We obtained good results in terms of accuracy, the model was able to detect cars as well as empty slots. The drawback of this solution was the size of the model, because it was impossible, even with int8 quantization, to obtain a model that could be deployed on our Arduino.  
 This obstacle lead us to completely change the architecture of our model.  
 To obtain a lighter model we abandoned the idea of performing a Multiple Objects Detection to focus on a single object. Therefore the model takes in input an image of the whole parking-lot and crops it creating an image for each lot. To make this important step we need every slot's bounding box, this information is already provided by the dataset. Thus the input image **can't** be a random parking-lot.  
 The detection performed shows the presence or abesence of a vehicle in a single parking slot, in the end by simply summing the number of cars detected is possible to decide if the parking lot is completely full or there are available slots.  
