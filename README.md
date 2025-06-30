@@ -12,7 +12,13 @@ The dataset used for training and validation is: [Parking-Lot Dataset](https://p
 ## How it works
 Our model takes in input an image of a known parking lot, it is fundamental to know the position (bounding box) of each slot. The program resize the image accordingly to the specifics of our Microcrontroller Unit and performs an inference on every image representing a single slot. The detection performed gives in output the presence, or absence, of a car. 
 
-## Deployement
+## Requirements
+Some packages/Apps need to be imported:
+-Pillow
+-[Arduino IDE](https://www.arduino.cc/en/software/)
+...
+
+
 
 ## Why the use of ARDUINO Nano 33 BLE Sense Lite
 Let's start by presenting the specifications of our microcontroller: ([Documentation](https://docs.arduino.cc/hardware/nano-33-ble-sense/)). It gives the opportunity to develope and deploy embedded ML applications thanks to the 64 MHz Arm® Cortex®-M4F processor, ehich is suitable to run small models and uses afficiently frameworks like TensorFlow Lite for Microcontrollers. Another important feature of this processor is that its support quantized models such as int8 quantization.\
