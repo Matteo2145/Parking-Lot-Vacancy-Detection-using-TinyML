@@ -1,7 +1,13 @@
 # Parking-Lot-Vacancy-Detection-using-TinyML
 
+![2012-09-11_16_48_36_jpg rf 4ecc8c87c61680ccc73edc218a2c8d7d](https://github.com/user-attachments/assets/45310e9d-bc77-4c76-ab5b-d59522dbb253)
+
+
 The aim of this project is to implement a Parking Lot Vacancy Detection using Tiny Machine Learning on a ARDUINO Nano 33 BLE Sense Lite given in the Tiny Machine Learning Kit.\ 
 The dataset used for training and validation is: [Parking-Lot Dataset](https://public.roboflow.com/object-detection/pklot/2).
+
+![image](https://github.com/user-attachments/assets/d3386dd5-e264-4dba-a1b0-0fe0281f54b1)
+
 
 ## How it works
 Our model takes in input an image of a known parking lot, it is fundamental to know the position (bounding box) of each slot. The program resize the image accordingly to the specifics of our Microcrontroller Unit and performs an inference on every image representing a single slot. The detection performed gives in output the presence, or absence, of a car. 
