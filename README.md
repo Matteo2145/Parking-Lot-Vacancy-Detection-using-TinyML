@@ -1,5 +1,5 @@
 # Parking-Lot-Vacancy-Detection-using-TinyML
-![ARDUINO Nano 33 BLE Sense Lite](https://openelab.io/it/products/arduino-nano-33-ble-sense-rev2?srsltid=AfmBOoqw-nJ4OQg3ssJSOv1mM0mOdtYJ5Eg2hZMnd7zY7PWjhEIK72_Z)
+
 The aim of this project is to implement a Parking Lot Vacancy Detection using Tiny Machine Learning on a ARDUINO Nano 33 BLE Sense Lite given in the Tiny Machine Learning Kit.\ 
 The dataset used for training and validation is: [Parking-Lot Dataset](https://public.roboflow.com/object-detection/pklot/2).
 
@@ -15,6 +15,10 @@ A limitation of this microcontroller is the limited amount of memory, having 1MB
 ## Challenges and Future Features
 As stated previously our main challenge was to create a light model. The first idea was to create a **Multiple Objects Detection** starting from a YOLO11n model, the model has been trained in Google Collab using the dataset showed in the introduction. We obtained good results in terms of accuracy, the model was able to detect cars as well as empty slots. The drawback of this solution was the size of the model, because it was impossible, even with int8 quantization, to obtain a model that could be deployed on our Arduino.\ 
 This obstacle lead us to completely change the architecture of our model.\
+To obtain a lighter model we abandoned the idea of performing a Multiple Objects Detection to focus on a single object. Therefore the model takes in input an image of the whole parking-lot and crops it creating an image for each lot. To make this important step we need every slot's bounding box, this information is already provided by the dataset. Thus the input image **can't** be a random parking-lot.\
+
+
+
 
 
 
