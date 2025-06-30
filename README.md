@@ -13,7 +13,7 @@ The dataset used for training and validation is: [Parking-Lot Dataset](https://p
 Our model takes in input an image of a known parking lot, it is fundamental to know the position (bounding box) of each slot. The program resize the image accordingly to the specifics of our Microcrontroller Unit and performs an inference on every image representing a single slot. The detection performed gives in output the presence, or absence, of a car. 
 
 ## Requirements
-Some packages/Apps need to be imported:
+Some packages/Apps need to be imported:  
 -Pillow  
 -[Arduino IDE](https://www.arduino.cc/en/software/)  
 ...
