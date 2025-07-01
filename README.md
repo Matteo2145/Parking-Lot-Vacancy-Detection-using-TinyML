@@ -14,7 +14,9 @@ Our model takes as input an image of a known parking lot, it is fundamental to k
 
 ## Requirements
 Some packages/Apps need to be imported:  
--Pillow  
+-ultralytics (only if you want to use Yolo)  
+-tensorflow  
+-Pillow   
 -[Arduino IDE](https://www.arduino.cc/en/software/)  
 -[TensorFLowLite Library](https://github.com/tensorflow/tflite-micro-arduino-examples) Just copy this repository in the folder that contains your Arduino IDE libraries (for Linux/ Mac typically ~/Arduino/libraries).   
 -Arduino_OV767X. This package can be easily installed directly from the Arduino IDE via the Library Manager.  
