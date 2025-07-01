@@ -151,7 +151,7 @@ void loop() {
   Serial.println("Injected grayscale image into frame_buffer.");
 
   int occupied_parking_spots = 0;
-  const float kPredictionThreshold = 0.7f;
+  const float kPredictionThreshold = 0.5f;
 
   for (int i = 0; i < num_boxes; i++) {
     extract_and_resize_box(boxes[i]);
@@ -168,22 +168,6 @@ void loop() {
 
     if (confidence > kPredictionThreshold) {
       occupied_parking_spots++;
-      //Serial.print("Box ");
-      //Serial.print(i);
-      //Serial.print(": OCCUPIED (Confidence: ");
-      //Serial.print(confidence, 4); // Print with 4 decimal places
-      //Serial.print(") Time: ");
-      //Serial.print(duration);
-      //Serial.println("ms");
-    } else {
-      //Serial.print("Box ");
-      //Serial.print(i);
-      //Serial.print(": EMPTY (Confidence: ");
-      //Serial.print(confidence, 4);
-      //Serial.print(") Time: ");
-      //Serial.print(duration);
-      //Serial.println("ms");
-    }
   }
   Serial.print("Total occupied parking spots: ");
   Serial.println(occupied_parking_spots);
