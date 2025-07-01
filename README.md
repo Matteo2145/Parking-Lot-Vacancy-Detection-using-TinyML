@@ -21,14 +21,19 @@ Some packages/Apps need to be imported:
 
 ## Usage  
 ### How to connect the board
-After connecting the board with your PC using the cable, open Arduino IDE environment. On the top left of the screen is possible to select the board you are using, select Arduino Nano 33 BLE.
+After connecting the board with your PC using the cable, open Arduino IDE environment. On the top left of the screen is possible to select the board you are using, select Arduino Nano 33 BLE. Then click Tool->Port and select which port the board is connected to.   
+## Selection of the image
+Second step is selecting the photo that we want to analyze using the script *generate_injected_image.py*. The input argument is the path of the image.  
+The Python script is designed to convert an RGB image into a grayscale image and then generate a C header file containing the image data as a byte array.  
 
+## Detection
+Once the C header file is created it's time to start the detection. In the Arduino IDE open the folder *Parking-Lot-Vacancy-Detection-using-TinyML\inference\parking-lot-vacancy-detection*, and upload the file *parking-lot-vacancy-detection.ino*.
 
 
 
 ## Why the use of ARDUINO Nano 33 BLE Sense Lite
 Let's start by presenting the specifications of our microcontroller: [Documentation](https://docs.arduino.cc/hardware/nano-33-ble-sense/). It gives the opportunity to develope and deploy embedded ML applications thanks to the 64 MHz Arm® Cortex®-M4F processor, ehich is suitable to run small models and uses afficiently frameworks like TensorFlow Lite for Microcontrollers. Another important feature of this processor is that its support quantized models such as int8 quantization.\
-A limitation of this microcontroller is the limited amount of memory, having 1MB flash and 256KB of RAM. This limitation forced us to create a model as tiny as possible having a good value of accuracy. Then click Tool->Port and select which port the board is connected to.  
+A limitation of this microcontroller is the limited amount of memory, having 1MB flash and 256KB of RAM. This limitation forced us to create a model as tiny as possible having a good value of accuracy. 
 
 
 ## Challenges and Future Features
