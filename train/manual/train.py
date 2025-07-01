@@ -52,11 +52,11 @@ model = keras.Sequential([
     # Input layer with rescaling. The input shape must match the image dimensions.
     layers.Rescaling(1./255, input_shape=(IMG_HEIGHT, IMG_WIDTH, 1)),
 
-    # First Convolutional Block
+    # First Convolutional Block. Captures low level features (edges, corners).
     layers.Conv2D(8, (3, 3), activation='relu'), # 8 filters
-    layers.MaxPooling2D(),
+    layers.MaxPooling2D(), #reduces spatial size and computation
 
-    # Second Convolutional Block
+    # Second Convolutional Block. Learns higher level patterns(shape, texture).
     layers.Conv2D(16, (3, 3), activation='relu'), # 16 filters
     layers.MaxPooling2D(),
 
@@ -76,7 +76,7 @@ model.summary()
 print("--- Compiling and training the model ---")
 model.compile(
     optimizer='adam',
-    loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
+    loss=tf.keras.losses.BinaryCrossentropy(from_logits=True), #for a binary classification
     metrics=['accuracy']
 )
 
