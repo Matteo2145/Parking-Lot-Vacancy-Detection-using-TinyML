@@ -64,7 +64,7 @@ The state of the art in parking occupancy detection can be broadly categorized i
 
 \noindent\textbf{Sensor-based systems} typically use ultrasonic, infrared, or magnetic sensors embedded in each parking space. While accurate, this approach suffers from high installation and maintenance costs, making it difficult to scale across large parking lots or entire city streets.
 
-\noindent\textbf{Vision-based systems} use cameras to monitor multiple parking spaces at once, making them more cost-effective per slot. The primary challenge lies in processing the visual data. High-end approaches utilize complex Deep Learning models like You Only Look Once (YOLO) or Faster R-CNN for vehicle detection \cite{yolo-parking}. These models provide excellent accuracy but are computationally demanding, requiring powerful GPUs for real-time processing, which is often done in the cloud. This reliance on the cloud introduces latency, privacy concerns, and a dependency on network connectivity.
+\noindent\textbf{Vision-based systems} use cameras to monitor multiple parking spaces at once, making them more cost-effective per slot. The primary challenge lies in processing the visual data. High-end approaches utilize complex Deep Learning models like You Only Look Once (YOLO) or Faster R-CNN for vehicle detection. These models provide excellent accuracy but are computationally demanding, requiring powerful GPUs for real-time processing, which is often done in the cloud. This reliance on the cloud introduces latency, privacy concerns, and a dependency on network connectivity.
 
 Recent efforts have aimed to bring vision processing to the edge to mitigate these issues. Some research explores deploying CNNs on more capable single-board computers like the Raspberry Pi \cite{rpi-parking}. However, these devices still consume significantly more power and are more expensive than microcontrollers. The true frontier of TinyML is to enable such applications on devices with memory measured in kilobytes, not gigabytes. The literature shows that deploying even simplified CNNs on microcontrollers for vision tasks is a significant challenge due to extreme memory (RAM and Flash) constraints \cite{tinyml-challenges}. Our work addresses this specific gap by designing a system explicitly for such a highly constrained environment.
 
@@ -99,7 +99,7 @@ The system's workflow is as follows:
     \item The model performs inference and outputs a classification (`occupied` or `empty`) for each slot.
 \end{enumerate}
 
-\noindent\textbf{Dataset Preparation:} We used the \href{https://public.roboflow.com/object-detection/pklot/2}{PKLot dataset}, which contains images of parking lots with annotated bounding boxes for each car. A significant part of our work involved writing scripts to process this dataset. Since our model needed to classify empty slots as well, we had to modify the dataset to generate labeled images for both `occupied` and `empty` states. This data preparation was a time-consuming but crucial step to create a suitable training set for our classification approach.
+\noindent\textbf{Dataset Preparation:} We used the PKLot dataset \cite{pklot}, which contains images of parking lots with annotated bounding boxes for each car. A significant part of our work involved writing scripts to process this dataset. Since our model needed to classify empty slots as well, we had to modify the dataset to generate labeled images for both `occupied` and `empty` states. This data preparation was a time-consuming but crucial step to create a suitable training set for our classification approach.
 
 \noindent\textbf{Hardware:} The core of our system is the \textbf{ARDUINO Nano 33 BLE Sense Lite}. Its Arm® Cortex®-M4F processor, running at 64 MHz, is capable of running optimized machine learning models using frameworks like TensorFlow Lite for Microcontrollers. Its extremely limited memory (256KB RAM, 1MB Flash) was the driving constraint for our design choices.
 
@@ -162,10 +162,10 @@ Our work successfully overcomes the limitations of both expensive sensor-based s
 
 \begin{thebibliography}{9}
 
-\bibitem{yolo-parking}
-Acharya, D., Yan, W. Q., \& Khoshelham, K. (2018).
-Real-Time Parking Occupancy Detection using Deep Learning.
-\textit{2018 International Conference on Image and Vision Computing New Zealand (IVCNZ)}.
+\bibitem{pklot}
+Almeida, Patrick and Oliveira, Luiz S. and Silva Jr, E. and Britto Jr, A. and Koerich, A. (2015).
+PKLot--A robust dataset for parking lot classification.
+\textit{2015 International Joint Conference on Neural Networks (IJCNN)}.
 
 \bibitem{rpi-parking}
 Amato, G., Carrara, F., Falchi, F., Gennaro, C., Meghini, C., \& Vairo, C. (2017).
