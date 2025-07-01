@@ -21,7 +21,7 @@ Some packages/Apps need to be imported:
 
 ## Usage  
 ### How to connect the board
-After connecting the board with your PC using the cable, open Arduino IDE environment. On the top left of the screen is possible to select the board you are using, select Arduino NAno 33 BLE.
+After connecting the board with your PC using the cable, open Arduino IDE environment. On the top left of the screen is possible to select the board you are using, select Arduino Nano 33 BLE.
 
 
 
