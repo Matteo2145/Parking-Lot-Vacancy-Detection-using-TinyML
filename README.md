@@ -24,11 +24,15 @@ Some packages/Apps need to be imported:
 After connecting the board to your PC using the cable, open Arduino IDE environment. On the top left of the screen you can select the board you are using, select Arduino Nano 33 BLE. Then click Tool->Port and select the port to which the board is connected.   
 ## Selection of the image
 Second step is selecting the photo that we want to analyze using the script *Parking-Lot-Vacancy-Detection-using-TinyML\inference\generate_injected_image.py*. The input argument is the path of the image. You can use an image from *Parking-Lot-Vacancy-Detection-using-TinyML\dataset\valid\images* for example.
-The Python script is designed to convert an RGB image into a grayscale and downsized (to the expected size of the Microcontroller) image and then generate a C header file containing the image data as a byte array.  
+The Python script is designed to convert an RGB image into a grayscale and downsized (to the expected size of the Microcontroller) image and then generate a C header file containing the image data as a byte array. 
+
+![Original](https://github.com/user-attachments/assets/1e33842b-d5c5-47d7-a51e-243c6aa51c0e)
 
 ## Detection
 Once the C header file is created it's time to start the detection. In the Arduino IDE open the folder *Parking-Lot-Vacancy-Detection-using-TinyML\inference\parking-lot-vacancy-detection*, and upload the file *parking-lot-vacancy-detection.ino*. Check that *injected_image.h* is located in the same folder as *parking-lot-vacancy-detection.ino*.  
 If there is an error that says that the device is not connected, try to double click the reset button on the board.   
+![Resized](https://github.com/user-attachments/assets/e24697b2-45a0-43c9-bf73-3c2e17624974)  
+![Results](https://github.com/user-attachments/assets/30798d12-e8e7-456a-9681-b47d943344bc)
 
 ## Why the use of ARDUINO Nano 33 BLE Sense Lite
 Let's start by presenting the specifications of our microcontroller: [Documentation](https://docs.arduino.cc/hardware/nano-33-ble-sense/). It gives the opportunity to develop and deploy embedded ML applications thanks to the 64 MHz Arm® Cortex®-M4F processor, which is suitable to run small models via frameworks like TensorFlow Lite for Microcontrollers. Another important feature of this processor is that it supports quantized models such as int8 quantization.\
