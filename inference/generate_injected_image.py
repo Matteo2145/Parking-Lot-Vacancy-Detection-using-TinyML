@@ -65,7 +65,14 @@ if __name__ == "__main__":
     desired_width = 160
     desired_height = 120 
 
+    if len(os.sys.argv) > 1:
+        input_image = os.sys.argv[1]
+
     if not os.path.exists(input_image):
         print(f"Input image file '{input_image}' does not exist.")
     else:
         convert_rgb_to_grayscale_header(input_image, output_file, desired_width, desired_height)
+
+    if os.path.exists(output_file):
+        print(f"Output header file '{output_file}' has been created successfully.")
+        os.rename(output_file, os.path.join("parking-lot-vacancy-detection", output_file))
