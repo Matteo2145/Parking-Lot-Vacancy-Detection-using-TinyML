@@ -168,6 +168,7 @@ void loop() {
 
     if (confidence > kPredictionThreshold) {
       occupied_parking_spots++;
+    }
   }
   Serial.print("Total occupied parking spots: ");
   Serial.println(occupied_parking_spots);
