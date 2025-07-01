@@ -21,7 +21,7 @@ Some packages/Apps need to be imported:
 
 ## Usage  
 ### How to connect the board
-After connecting the board with your PC using the cable, open Arduino IDE environment. On the top left of the screen is possible to select the board you are using, select Arduino Nano 33 BLE. Then click Tool->Port and select which port the board is connected to.   
+After connecting the board to your PC using the cable, open Arduino IDE environment. On the top left of the screen is possible to select the board you are using, select Arduino Nano 33 BLE. Then click Tool->Port and select the port to which the board is connected.   
 ## Selection of the image
 Second step is selecting the photo that we want to analyze using the script *generate_injected_image.py*. The input argument is the path of the image.  
 The Python script is designed to convert an RGB image into a grayscale image and then generate a C header file containing the image data as a byte array.  
