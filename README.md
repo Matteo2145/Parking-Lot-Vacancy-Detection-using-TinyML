@@ -16,7 +16,8 @@ Our model takes in input an image of a known parking lot, it is fundamental to k
 Some packages/Apps need to be imported:  
 -Pillow  
 -[Arduino IDE](https://www.arduino.cc/en/software/)  
-...
+-[TensorFLowLite Library](https://github.com/tensorflow/tflite-micro-arduino-examples) Just copy this repository in the folder that contains your Arduino IDE libraries 
+-Arduino_OV767X. This package can be easily installed directly from the Arduino IDE in the Library Manager.  
 
 
 
