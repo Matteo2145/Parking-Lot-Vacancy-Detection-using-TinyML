@@ -27,7 +27,8 @@ Second step is selecting the photo that we want to analyze using the script *Par
 The Python script is designed to convert an RGB image into a grayscale and downsized (to the expected size of the Microcontroller) image and then generate a C header file containing the image data as a byte array.  
 
 ## Detection
-Once the C header file is created it's time to start the detection. In the Arduino IDE open the folder *Parking-Lot-Vacancy-Detection-using-TinyML\inference\parking-lot-vacancy-detection*, and upload the file *parking-lot-vacancy-detection.ino*. Check that *injected_image.h* is located in the same folder as *parking-lot-vacancy-detection.ino*.
+Once the C header file is created it's time to start the detection. In the Arduino IDE open the folder *Parking-Lot-Vacancy-Detection-using-TinyML\inference\parking-lot-vacancy-detection*, and upload the file *parking-lot-vacancy-detection.ino*. Check that *injected_image.h* is located in the same folder as *parking-lot-vacancy-detection.ino*.  
+If there is an error that says that the device is not connected, try to double click the reset button on the board.   
 
 ## Why the use of ARDUINO Nano 33 BLE Sense Lite
 Let's start by presenting the specifications of our microcontroller: [Documentation](https://docs.arduino.cc/hardware/nano-33-ble-sense/). It gives the opportunity to develop and deploy embedded ML applications thanks to the 64 MHz Arm® Cortex®-M4F processor, which is suitable to run small models via frameworks like TensorFlow Lite for Microcontrollers. Another important feature of this processor is that it supports quantized models such as int8 quantization.\
