@@ -19,11 +19,17 @@ Some packages/Apps need to be imported:
 -[TensorFLowLite Library](https://github.com/tensorflow/tflite-micro-arduino-examples) Just copy this repository in the folder that contains your Arduino IDE libraries.   
 -Arduino_OV767X. This package can be easily installed directly from the Arduino IDE in the Library Manager.  
 
+## Usage  
+### How to connect the board
+After connecting the board with your PC using the cable, open Arduino IDE environment. On the top left of the screen is possible to select the board you are using, select Arduino NAno 33 BLE.
+
+
 
 
 ## Why the use of ARDUINO Nano 33 BLE Sense Lite
 Let's start by presenting the specifications of our microcontroller: ([Documentation](https://docs.arduino.cc/hardware/nano-33-ble-sense/)). It gives the opportunity to develope and deploy embedded ML applications thanks to the 64 MHz Arm® Cortex®-M4F processor, ehich is suitable to run small models and uses afficiently frameworks like TensorFlow Lite for Microcontrollers. Another important feature of this processor is that its support quantized models such as int8 quantization.\
-A limitation of this microcontroller is the limited amount of memory, having 1MB flash and 256KB of RAM. This limitation forced us to create a model as tiny as possible having a good value of accuracy.
+A limitation of this microcontroller is the limited amount of memory, having 1MB flash and 256KB of RAM. This limitation forced us to create a model as tiny as possible having a good value of accuracy. Then click Tool->Port and select which port the board is connected to.  
+
 
 ## Challenges and Future Features
 
