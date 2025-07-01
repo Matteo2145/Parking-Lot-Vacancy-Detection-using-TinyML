@@ -27,7 +27,7 @@ After connecting the board with your PC using the cable, open Arduino IDE enviro
 
 
 ## Why the use of ARDUINO Nano 33 BLE Sense Lite
-Let's start by presenting the specifications of our microcontroller: ([Documentation](https://docs.arduino.cc/hardware/nano-33-ble-sense/)). It gives the opportunity to develope and deploy embedded ML applications thanks to the 64 MHz Arm® Cortex®-M4F processor, ehich is suitable to run small models and uses afficiently frameworks like TensorFlow Lite for Microcontrollers. Another important feature of this processor is that its support quantized models such as int8 quantization.\
+Let's start by presenting the specifications of our microcontroller: [Documentation](https://docs.arduino.cc/hardware/nano-33-ble-sense/). It gives the opportunity to develope and deploy embedded ML applications thanks to the 64 MHz Arm® Cortex®-M4F processor, ehich is suitable to run small models and uses afficiently frameworks like TensorFlow Lite for Microcontrollers. Another important feature of this processor is that its support quantized models such as int8 quantization.\
 A limitation of this microcontroller is the limited amount of memory, having 1MB flash and 256KB of RAM. This limitation forced us to create a model as tiny as possible having a good value of accuracy. Then click Tool->Port and select which port the board is connected to.  
 
 
