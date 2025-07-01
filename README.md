@@ -27,7 +27,7 @@ Second step is selecting the photo that we want to analyze using the script *gen
 The Python script is designed to convert an RGB image into a grayscale image and then generate a C header file containing the image data as a byte array.  
 
 ## Detection
-Once the C header file is created it's time to start the detection. In the Arduino IDE open the folder *Parking-Lot-Vacancy-Detection-using-TinyML\inference\parking-lot-vacancy-detection*, and upload the file *parking-lot-vacancy-detection.ino*.
+Once the C header file is created it's time to start the detection. In the Arduino IDE open the folder *Parking-Lot-Vacancy-Detection-using-TinyML\inference\parking-lot-vacancy-detection*, and upload the file *parking-lot-vacancy-detection.ino*. Check that *injected_image.h* is located in the same folder as *parking-lot-vacancy-detection.ino*.
 
 
 
