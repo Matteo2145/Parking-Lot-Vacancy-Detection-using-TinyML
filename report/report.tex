@@ -145,6 +145,7 @@ Our approach yielded highly successful results, demonstrating that TinyML can be
 \noindent\textbf{Key Empirical Results:}
 \begin{enumerate}
     \item \textbf{High Classification Accuracy:} The model achieved a \textbf{validation accuracy of 99.40\%} and a training accuracy of 99.25\%. This outstanding result shows that the simplified classification model can distinguish between occupied and empty parking slots with a very high degree of reliability.
+    \item \textbf{Low memory Footprint:} The size of the C-Code header file is \textbf{only 192KB}. This small size allows the model to fit comfortably within the memory constraints of the ARDUINO Nano 33 BLE Sense Lite, which has only 256KB of RAM and 1MB of Flash memory.
     \item \textbf{Efficient On-Device Performance:} When deployed on the ARDUINO Nano 33 BLE Sense Lite, the quantized model performed inference on a single parking slot image in approximately \textbf{120-121 milliseconds}. This swift performance allows a system to scan a multi-slot parking lot in a matter of seconds, making it suitable for real-time applications.
 \end{enumerate}
 
