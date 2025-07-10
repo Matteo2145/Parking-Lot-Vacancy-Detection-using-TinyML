@@ -99,6 +99,24 @@ The system's workflow is as follows:
     \item The model performs inference and outputs a classification (`occupied` or `empty`) for each slot.
 \end{enumerate}
 
+\noindent\textbf{Inference Process by using an Injected Image}
+
+To demonstrate the end-to-end functionality of our TinyML solution and visualise its real-world performance, we developed a Python script that generates a grayscale image measuring 160x120 pixels of a given parking lot (e.g. using the validation split of the dataset) and creates a C-Code header file. This injected image can then be used in place of the image produced by the camera for simulation purposes.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{./images/input.jpg}
+    \caption{Original image from validation split of the dataset.}
+    \label{fig:input}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{./images/output.jpg}
+    \caption{Output of the python script. The image is now in grayscale with dimensions of 160x120 pixels simulating the output of the OV7675 camera module. The C-Code header file contains the pixel values of this image, which can be used in the Arduino sketch to simulate the inference process without needing a physical camera.}
+    \label{fig:output}
+\end{figure}
+
 \noindent\textbf{Dataset Preparation:} We used the PKLot dataset \cite{pklot}, which contains images of parking lots with annotated bounding boxes for each car. A significant part of our work involved writing scripts to process this dataset. Since our model needed to classify empty slots as well, we had to modify the dataset to generate labeled images for both `occupied` and `empty` states. This data preparation was a time-consuming but crucial step to create a suitable training set for our classification approach.
 
 \noindent\textbf{Hardware:} The core of our system is the \textbf{ARDUINO Nano 33 BLE Sense Lite}. Its Arm® Cortex®-M4F processor, running at 64 MHz, is capable of running optimized machine learning models using frameworks like TensorFlow Lite for Microcontrollers. Its extremely limited memory (256KB RAM, 1MB Flash) was the driving constraint for our design choices.
