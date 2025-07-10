@@ -46,7 +46,7 @@ The model was trained and validated using the [PKLot Dataset on Roboflow](https:
 
 ---
 
-## ⚙️ How It Works
+## <a name="how-it-works"></a>⚙️ How It Works
 
 Instead of a complex object detection model like YOLO, this project uses a more efficient approach suitable for microcontrollers:
 
@@ -111,7 +111,7 @@ You will need the following hardware and software:
 
 ---
 
-## 🛠️ Usage
+## <a name="usage"></a>🛠️ Usage
 
 Follow these steps to run the detection on a new image.
 
@@ -144,7 +144,7 @@ Follow these steps to run the detection on a new image.
 
 ---
 
-## 🗺️ Project Journey
+## <a name="project-journey"></a>🗺️ Project Journey
 
 ### Challenges Faced
 
