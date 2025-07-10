@@ -15,6 +15,7 @@ This project takes a static image of a parking lot, processes it, and determines
 * [About The Project](#-about-the-project)
 * [Key Features](#-key-features)
 * [How It Works](#-how-it-works)
+* [Project Structure](#-project-structure)
 * [Getting Started](#-getting-started)
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
@@ -54,6 +55,22 @@ Instead of a complex object detection model like YOLO, this project uses a more 
 3.  **Individual Slot Classification**: The Arduino code iterates through the pre-defined coordinates of each parking space. It crops the tiny image of each slot and feeds it to a classification model.
 4.  **Binary Output**: The model determines if the slot contains a car ("Occupied") or not ("Vacant").
 5.  **Final Count**: The results for all slots are aggregated to provide a final count of available spaces.
+
+---
+
+## <a name="project-structure"></a>📂 Project Structure
+
+The repository is organized as follows:
+
+| File / Folder                        | Description                                  |
+| ------------------------------------ | -------------------------------------------- |
+| `dataset/`                           | Contains the image dataset for training, test and validation.   |
+| `inference/`                         | Scripts and Arduino code for running the model. |
+| `├─ parking-lot-vacancy-detection/` | Arduino sketch folder.                       |
+| `└─ generate_injected_image.py`      | Python script to prepare images for Arduino. |
+| `report/`                            | Project report.       |
+| `train/`                             | Scripts for training the model (manual) as well as artifacts for experimenting with Yolov11n (yolo).  |
+| `README.md`                          | Starting point for exploring the repository.         |
 
 ---
 
